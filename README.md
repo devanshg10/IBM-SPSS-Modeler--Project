@@ -1,131 +1,239 @@
-<!-- Banner Section -->
-<p align="center">
-  <img src="https://raw.githubusercontent.com/crimsonrewind/assets/main/assets/banner.png" alt="Telco Churn Prediction Banner" width="100%">
-</p>
-
-<h1 align="center"> Telco Customer Churn Prediction using IBM SPSS Modeler</h1>
+# 📊 Telco Customer Churn Analysis
 
 <p align="center">
-  <b>Predictive Analytics Project | IBM SPSS Modeler | CHAID Algorithm</b><br>
-  <img src="https://img.shields.io/badge/Tool-IBM%20SPSS%20Modeler-blue?style=flat-square">
-  <img src="https://img.shields.io/badge/Algorithm-CHAID-orange?style=flat-square">
-  <img src="https://img.shields.io/badge/Status-Completed-success?style=flat-square">
+  <strong>Predictive Analytics with IBM SPSS Modeler</strong><br>
+  Customer churn classification using the CHAID decision-tree technique
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/IBM-SPSS%20Modeler-0F62FE?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Model-CHAID-FF832B?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Project-Predictive%20Analytics-198038?style=for-the-badge">
 </p>
 
 ---
 
-##  Project Overview
+## 🔎 Project Snapshot
 
-This project demonstrates a **Telco Customer Churn Prediction** model built using **IBM SPSS Modeler** as part of a **Predictive Analytics course**.  
-The objective was to **train and test a churn prediction model** using Telco datasets and export the results for further analysis.  
+Customer churn is an important business problem for telecommunications companies.  
+This project uses **IBM SPSS Modeler** to prepare customer data, construct a predictive model, evaluate churn-related records, and generate an output dataset for further analysis.
 
-The model leverages the **CHAID (Chi-squared Automatic Interaction Detection)** algorithm to identify key factors influencing customer churn and to classify customers based on churn likelihood.
+### What this project covers
 
----
-
-##  Objective
-
-> To train a churn prediction model on the **Telco modeling dataset** and test the model on the **Telco deployment dataset**, then export the predicted results.
-
----
-
-##  Workflow Summary
-
-| Step | Task | Description |
-|------|------|--------------|
-| 1️⃣ | **Data Import** | Imported Telco dataset using the **Excel node**. |
-| 2️⃣ | **Data Filtering** | Used the **Select node** to include only records where `data_known = "yes"`. |
-| 3️⃣ | **Data Typing** | Defined measurement levels and roles using the **Type node**. |
-| 4️⃣ | **Model Training** | Trained a model using the **CHAID algorithm**. |
-| 5️⃣ | **Model Testing** | Tested the model with the **deployment dataset**. |
-| 6️⃣ | **Result Selection** | Selected only churned customers with accuracy above `0.94`. |
-| 7️⃣ | **Field Filtering** | Used a **Filter node** to keep relevant fields only. |
-| 8️⃣ | **Result Export** | Exported the final results using the **Flat File node**. |
+- 📥 Importing customer data
+- 🧹 Filtering relevant records
+- 🏷️ Defining field roles and measurement levels
+- 🌳 Building a CHAID model
+- 🧪 Applying the model to deployment data
+- 🎯 Selecting relevant churn predictions
+- 📤 Exporting the final results
 
 ---
 
-##  Steps with Screenshots
+## 🎯 Aim
 
-### 1. Data Import
-Imported the dataset using **Excel node** from the source palette.
+The primary aim is to develop a predictive workflow that can identify customers associated with **churn** using the available telecommunications customer attributes.
 
-![Step 1 - Data Import](screenshots/data_import.png)
-
----
-
-### 2. Data Filtering
-Used **Select node** with condition `data_known = "yes"` to include only known data.
-
-![Step 2 - Data Filtering](screenshots/data_filter.png)
+The workflow is implemented completely through **IBM SPSS Modeler nodes**, making the project suitable for demonstrating a practical predictive-analytics pipeline.
 
 ---
 
-### 3. Define Field Roles
-Connected the **Select node** to a **Type node** and set predictors, target, and measurement levels.
+## 🧩 Model Pipeline
 
-![Step 3 - Define Field Roles](screenshots/type_node.png)
-
----
-
-### 4. Model Training (CHAID)
-Built the model using **CHAID node** and ran the training process.
-
-![Step 4 - Model Training](screenshots/model_training.png)
-
----
-
-### 5. Model Testing
-Tested the model using deployment dataset and evaluated churn predictions.
-
-![Step 5 - Model Testing](screenshots/model_testing.png)
-
----
-
-### 6. Export Results
-Exported the [output](https://raw.githubusercontent.com/crimsonrewind/Telco_Churn_Prediction_SPSS/main/output/churned_customer) file using the **Flat File node** for final predictions.
-
-![Step 6 - Export Results](screenshots/export_output.png)
-
----
-
-##  Key Outcomes
-
-- Successfully trained and validated a **CHAID-based churn model**.   
-- Identified **key predictors** such as contract type, tenure, and monthly charges.  
-- Exported actionable customer churn data for business insights.
-
----
-
-##  Tools & Technologies
-
-- **IBM SPSS Modeler**
-- **CHAID Algorithm**
-- **Telco Customer Dataset (Training & Deployment)**
-
-
+```text
+┌───────────────┐
+│  Input Data   │
+└───────┬───────┘
+        ↓
+┌───────────────┐
+│ Select /      │
+│ Filter Data   │
+└───────┬───────┘
+        ↓
+┌───────────────┐
+│ Define Fields │
+│ & Data Types  │
+└───────┬───────┘
+        ↓
+┌───────────────┐
+│ CHAID Model   │
+│    Training   │
+└───────┬───────┘
+        ↓
+┌───────────────┐
+│ Deployment /  │
+│    Testing    │
+└───────┬───────┘
+        ↓
+┌───────────────┐
+│ Select Churn  │
+│   Results     │
+└───────┬───────┘
+        ↓
+┌───────────────┐
+│ Export Final  │
+│    Output     │
+└───────────────┘
+```
 
 ---
 
-##  References
+## ⚙️ Processing Workflow
 
-- [IBM SPSS Modeler Documentation](https://www.ibm.com/docs/en/spss-modeler/18.6.0?topic=spss-modeler-v1860-documentation)  
-- Predictive Analytics Course Material  
-- Telco Churn Dataset (for [modeling](https://raw.githubusercontent.com/crimsonrewind/Telco_Churn_Prediction_SPSS/main/data/telco_deployment_data.xlsx) and [deployment](https://raw.githubusercontent.com/crimsonrewind/Telco_Churn_Prediction_SPSS/main/data/telco_modeling_data.xlsx))
+| Phase | SPSS Modeler Component | Purpose |
+|---|---|---|
+| **01** | Excel Node | Load the Telco customer dataset |
+| **02** | Select Node | Keep records where `data_known = "yes"` |
+| **03** | Type Node | Configure field roles and measurement levels |
+| **04** | CHAID Node | Train the churn classification model |
+| **05** | Deployment Data | Apply the trained model to new records |
+| **06** | Selection | Extract relevant churn predictions |
+| **07** | Filter Node | Retain required output fields |
+| **08** | Flat File Node | Save the final prediction results |
 
 ---
 
-##  Author
+## 🖥️ SPSS Modeler Implementation
 
-**Name:** *NAME*  
-**Course:**   
-**Instructor:** *NAME*  
-**Institution:** *COLLEGE*  
-**GitHub:** LINK
+### 01 — Dataset Preparation
+
+The source dataset is imported into the SPSS Modeler stream through the appropriate input node.
+
+![Dataset Import](screenshots/data_import.png)
+
+---
+
+### 02 — Record Selection
+
+A **Select node** is used to restrict the analysis to records satisfying:
+
+```text
+data_known = "yes"
+```
+
+![Data Filtering](screenshots/data_filter.png)
+
+---
+
+### 03 — Field Configuration
+
+The **Type node** is used to define the appropriate field roles, targets, predictors, and measurement levels before model building.
+
+![Field Configuration](screenshots/type_node.png)
+
+---
+
+### 04 — CHAID Model
+
+The prepared dataset is passed into the **CHAID node** to construct the classification model.
+
+![CHAID Model](screenshots/model_training.png)
+
+---
+
+### 05 — Prediction / Deployment
+
+The trained model is applied to the deployment dataset to generate predicted customer outcomes.
+
+![Model Testing](screenshots/model_testing.png)
+
+---
+
+### 06 — Final Output
+
+The required prediction fields are selected and exported using a **Flat File node**.
+
+![Output Export](screenshots/export_output.png)
+
+---
+
+## 📈 Analysis Highlights
+
+The resulting model can be used to examine customer characteristics associated with churn.
+
+Some of the customer attributes considered in the analysis include:
+
+- **Contract type**
+- **Customer tenure**
+- **Monthly charges**
+- Other available customer-level attributes
+
+The final workflow produces a filtered set of prediction results that can be used for subsequent business analysis.
+
+> **Note:** Model performance and predictor importance should be interpreted from the actual SPSS Modeler output generated for this project.
+
+---
+
+## 🛠️ Technology Stack
+
+| Category | Technology |
+|---|---|
+| Analytics Platform | **IBM SPSS Modeler** |
+| Predictive Technique | **CHAID** |
+| Dataset | Telco Customer Data |
+| Data Input | Excel |
+| Data Output | Flat File |
+| Analysis Type | Classification / Predictive Analytics |
+
+---
+
+## 📁 Repository Structure
+
+```text
+IBM-SPSS-Modeler--Project/
+│
+├── datasets/
+│   └── Telco-Customer-Churn.csv
+│
+├── screenshots/
+│   ├── data_import.png
+│   ├── data_filter.png
+│   ├── type_node.png
+│   ├── model_training.png
+│   ├── model_testing.png
+│   └── export_output.png
+│
+├── output/
+│   └── churn_predictions.csv
+│
+└── README.md
+```
+
+---
+
+## 📚 Learning Outcomes
+
+Through this project, the following concepts were practiced:
+
+- Data preparation in IBM SPSS Modeler
+- Selecting records using conditions
+- Defining field metadata
+- Predictive model construction
+- CHAID-based classification
+- Model deployment
+- Filtering prediction results
+- Exporting analytical outputs
+- Interpreting customer churn patterns
+
+---
+
+## 🔗 References
+
+- [IBM SPSS Modeler Documentation](https://www.ibm.com/docs/en/spss-modeler/18.6.0)
+- Predictive Analytics course material
+- Telco customer churn dataset used for the analysis
+
+---
+
+## 👨‍💻 Project Information
+
+**Student:** Devansh Gupta  
+**Program:** BCA — Data Science & Artificial Intelligence  
+**Institution:** Babu Banarasi Das University  
+**Course:** Predictive Analytics  
 
 ---
 
 <p align="center">
-   <i>“Data is the new oil — predictive analytics is the refinery.”</i>
+  <sub>Built as an academic predictive analytics project using IBM SPSS Modeler.</sub>
 </p>
-
-
