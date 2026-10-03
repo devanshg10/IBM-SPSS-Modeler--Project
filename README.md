@@ -111,7 +111,7 @@ A **Select node** is used to restrict the analysis to records satisfying:
 data_known = "yes"
 ```
 
-![Data Filtering](screenshots/data_filter.png)
+![Data Filtering](Workflow%20Screenshots/2-SelectingNode.png)
 
 ---
 
