@@ -110,8 +110,7 @@ A **Select node** is used to restrict the analysis to records satisfying:
 ```text
 data_known = "yes"
 ```
-
-![Data Filtering](Workflow%20Screenshots/2-SelectingNode.png)
+![Data Filtering](Workflow%20Screenshots/2-Selecting%20Node.png)
 
 ---
 
