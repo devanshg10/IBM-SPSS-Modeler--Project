@@ -116,11 +116,11 @@ Exported the [output](https://raw.githubusercontent.com/crimsonrewind/Telco_Chur
 
 ##  Author
 
-**Name:** *Ayush Verma*  
-**Course:** Predictive Analytics  
-**Instructor:** *Mr. Ayushman Bhadauria*  
-**Institution:** *BABU BANARASI DAS UNIVERSITY*  
-**GitHub:** [@crimsonrewind](https://github.com/crimsonrewind)
+**Name:** *NAME*  
+**Course:**   
+**Instructor:** *NAME*  
+**Institution:** *COLLEGE*  
+**GitHub:** LINK
 
 ---
 
