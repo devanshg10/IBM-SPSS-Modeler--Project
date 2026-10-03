@@ -99,7 +99,7 @@ The workflow is implemented completely through **IBM SPSS Modeler nodes**, makin
 
 The source dataset is imported into the SPSS Modeler stream through the appropriate input node.
 
-![Dataset Import](Workflow Screenshots/1-Importing.png)
+![Dataset Import](Workflow%20Screenshots/1-Importing.png)
 
 ---
 
