@@ -36,47 +36,6 @@ The primary aim is to develop a predictive workflow that can identify customers 
 
 The workflow is implemented completely through **IBM SPSS Modeler nodes**, making the project suitable for demonstrating a practical predictive-analytics pipeline.
 
----
-
-## 🧩 Model Pipeline
-
-```text
-┌───────────────┐
-│  Input Data   │
-└───────┬───────┘
-        ↓
-┌───────────────┐
-│ Select /      │
-│ Filter Data   │
-└───────┬───────┘
-        ↓
-┌───────────────┐
-│ Define Fields │
-│ & Data Types  │
-└───────┬───────┘
-        ↓
-┌───────────────┐
-│ CHAID Model   │
-│    Training   │
-└───────┬───────┘
-        ↓
-┌───────────────┐
-│ Deployment /  │
-│    Testing    │
-└───────┬───────┘
-        ↓
-┌───────────────┐
-│ Select Churn  │
-│   Results     │
-└───────┬───────┘
-        ↓
-┌───────────────┐
-│ Export Final  │
-│    Output     │
-└───────────────┘
-```
-
----
 
 ## ⚙️ Processing Workflow
 
@@ -229,30 +188,6 @@ The final workflow produces a filtered set of prediction results that can be use
 
 ---
 
-## 📁 Repository Structure
-
-```text
-IBM-SPSS-Modeler--Project/
-│
-├── datasets/
-│   └── Telco-Customer-Churn.csv
-│
-├── screenshots/
-│   ├── data_import.png
-│   ├── data_filter.png
-│   ├── type_node.png
-│   ├── model_training.png
-│   ├── model_testing.png
-│   └── export_output.png
-│
-├── output/
-│   └── churn_predictions.csv
-│
-└── README.md
-```
-
----
-
 ## 📚 Learning Outcomes
 
 Through this project, the following concepts were practiced:
@@ -280,7 +215,8 @@ Through this project, the following concepts were practiced:
 ## 👨‍💻 Project Information
 
 **Student:** Devansh Gupta  
-**Program:** BCA — Data Science & Artificial Intelligence  
+**Roll No:** 1240258159
+**Batch:** BCADS-33 
 **Institution:** Babu Banarasi Das University  
 **Course:** Predictive Analytics
 
