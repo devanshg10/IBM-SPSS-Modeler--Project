@@ -1,4 +1,4 @@
-# 📊 Telco Customer Churn Analysis
+# Customer Churn Prediction Pipeline ft. IBM SPSS
 
 <h2 align="center">Predictive Analytics with IBM SPSS Modeler</h2>
 <p align="center">
