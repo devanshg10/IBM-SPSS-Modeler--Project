@@ -107,10 +107,6 @@ The Telco customer churn dataset is imported into IBM SPSS Modeler through an Ex
 
 Records with **data_known = "yes"** are retained for further analysis.
 
-```text
-data_known = "yes"
-```
-
 ![Data Filtering](Workflow%20Screenshots/2-Selecting%20Node.png)
 
 ---
@@ -132,7 +128,6 @@ A **CHAID model** is trained using the prepared dataset to identify patterns ass
 
 ### 05 — Complete Model Training Stream
 
-The deployment data is filtered to retain records where data_known = "yes".
 
 ![Output Export](Workflow%20Screenshots/5-Complete%20Model%20Training%20Workflow.png)
 
@@ -149,11 +144,13 @@ A separate deployment dataset is imported into the stream for applying and evalu
 ### 07 — Deployment Record Selection
 
 The deployment data is filtered to retain records where data_known = "yes".
+
 ![Model Testing](Workflow%20Screenshots/7-Selecting%20Node.png)
 
 ---
 
 ### 08 — Apply Trained Model
+
 The trained CHAID model is applied to the deployment dataset to generate churn predictions.
 
 ![Model Testing](Workflow%20Screenshots/8-Churn%20Node.png)
@@ -168,9 +165,9 @@ The predicted results are filtered to identify customers meeting the specified c
 
 ---
 
-### 10 — WRITE
+### 10 — Churn Accuracy Calculation
 
-A separate deployment dataset is imported into the stream for applying and evaluating the trained model.
+Using the **Derive node**, the predicted churn score is converted into a percentage for evaluating the model’s prediction results.
 
 ![Model Testing](Workflow%20Screenshots/10.png)
 
@@ -193,8 +190,6 @@ The final results are exported to a flat file for external use and further analy
 ---
 
 ### 13 — FULL Stream
-
-A separate deployment dataset is imported into the stream for applying and evaluating the trained model.
 
 ![Model Testing](Workflow%20Screenshots/13-Full%20Stream.png)
 
