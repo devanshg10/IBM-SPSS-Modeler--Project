@@ -25,13 +25,13 @@ This project uses **IBM SPSS Modeler** to prepare customer data, construct a pre
 
 ### What this project covers
 
-- 📥 Importing customer data
-- 🧹 Filtering relevant records
-- 🏷️ Defining field roles and measurement levels
-- 🌳 Building a CHAID model
-- 🧪 Applying the model to deployment data
-- 🎯 Selecting relevant churn predictions
-- 📤 Exporting the final results
+-  Importing customer data
+-  Filtering relevant records
+-  Defining field roles and measurement levels
+-  Building a CHAID model
+-  Applying the model to deployment data
+-  Selecting relevant churn predictions
+-  Exporting the final results
 
 ---
 
