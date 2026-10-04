@@ -125,11 +125,13 @@ A **CHAID model** is trained using the prepared dataset to identify patterns ass
 
 ![CHAID Model](Workflow%20Screenshots/4-Churn.png)
 
+---
 
 ### 05 — Complete Model Training Stream
 
+The complete training stream brings together data preparation, field configuration, and CHAID model construction into a single workflow.
 
-![Output Export](Workflow%20Screenshots/5-Complete%20Model%20Training%20Workflow.png)
+![Complete Model Training Stream](Workflow%20Screenshots/5-Complete%20Model%20Training%20Workflow.png)
 
 ---
 
@@ -137,15 +139,15 @@ A **CHAID model** is trained using the prepared dataset to identify patterns ass
 
 A separate deployment (testing) dataset is imported into the stream for applying and evaluating the trained model.
 
-![Model Testing](Workflow%20Screenshots/6-Importing%20for%20Testing.png)
+![Testing Dataset](Workflow%20Screenshots/6-Importing%20for%20Testing.png)
 
 ---
 
-### 07 — Model Testing data Selection
+### 07 — Model Testing Data Selection
 
-The testing data is filtered to retain records where data_known = "yes".
+The testing data is filtered to retain records where `data_known = "yes"`.
 
-![Model Testing](Workflow%20Screenshots/7-Selecting%20Node.png)
+![Model Testing Data Selection](Workflow%20Screenshots/7-Selecting%20Node.png)
 
 ---
 
@@ -153,15 +155,15 @@ The testing data is filtered to retain records where data_known = "yes".
 
 The trained CHAID model is applied to the deployment dataset to generate churn predictions.
 
-![Model Testing](Workflow%20Screenshots/8-Churn%20Node.png)
+![Applying Trained Model](Workflow%20Screenshots/8-Churn%20Node.png)
 
 ---
 
-### 9 — Churn Selection
+### 09 — Churn Selection
 
 The predicted results are filtered to identify customers meeting the specified churn prediction criteria.
 
-![Model Testing](Workflow%20Screenshots/9-Churn.png)
+![Churn Selection](Workflow%20Screenshots/9-Churn.png)
 
 ---
 
@@ -169,7 +171,7 @@ The predicted results are filtered to identify customers meeting the specified c
 
 Using the **Derive node**, the predicted churn score is converted into a percentage for evaluating the model’s prediction results.
 
-![Model Testing](Workflow%20Screenshots/10.png)
+![Churn Accuracy Calculation](Workflow%20Screenshots/10.png)
 
 ---
 
@@ -177,7 +179,7 @@ Using the **Derive node**, the predicted churn score is converted into a percent
 
 Only the relevant fields required for the final analysis are retained.
 
-![Model Testing](Workflow%20Screenshots/11-Filter%20Node.png)
+![Field Filtering](Workflow%20Screenshots/11-Filter%20Node.png)
 
 ---
 
@@ -185,13 +187,15 @@ Only the relevant fields required for the final analysis are retained.
 
 The final results are exported to a flat file for external use and further analysis.
 
-![Model Testing](Workflow%20Screenshots/12-Exporting%20Data%20(2).png)
+![Result Export](Workflow%20Screenshots/12-Exporting%20Data%20(2).png)
 
 ---
 
-### 13 — FULL Stream
+### 13 — Complete Stream
 
-![Model Testing](Workflow%20Screenshots/13-Full%20Stream.png)
+The complete SPSS Modeler stream brings together the training, testing, prediction, filtering, and output stages into a unified workflow.
+
+![Complete Stream](Workflow%20Screenshots/13-Full%20Stream.png)
 
 ---
 
@@ -278,7 +282,7 @@ Through this project, the following concepts were practiced:
 **Student:** Devansh Gupta  
 **Program:** BCA — Data Science & Artificial Intelligence  
 **Institution:** Babu Banarasi Das University  
-**Course:** Predictive Analytics  
+**Course:** Predictive Analytics
 
 ---
 
