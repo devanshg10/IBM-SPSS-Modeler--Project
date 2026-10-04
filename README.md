@@ -12,8 +12,8 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/IBM-SPSS%20Modeler-0F62FE?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Model-CHAID-FF832B?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Project-Predictive%20Analytics-198038?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Model-CHAID-0F62FE?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Project-Predictive%20Analytics-0F62FE?style=for-the-badge">
 </p>
 
 ---
