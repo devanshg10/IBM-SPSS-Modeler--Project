@@ -1,7 +1,7 @@
 
 <!-- Banner Section -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/crimsonrewind/assets/main/assets/banner.png" alt="Telco Churn Prediction Banner" width="100%">
+  <img src="assets/banner.png" alt="A Study of Churn Banner" width="100%">
 </p>
 
 <h1 align="center"> Customer Churn Prediction Pipeline ft. IBM SPSS</h1>
