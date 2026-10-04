@@ -146,7 +146,7 @@ The deployment data is filtered to retain records where data_known = "yes".
 
 ---
 
-### 07 — Importing Dataset for Model Testing
+### 07 — Deployment Dataset
 
 A separate deployment dataset is imported into the stream for applying and evaluating the trained model.
 
@@ -154,24 +154,23 @@ A separate deployment dataset is imported into the stream for applying and evalu
 
 ---
 
-### 08 — Selecting data with yes for testing
+### 08 — Deployment Record Selection
 
-A separate deployment dataset is imported into the stream for applying and evaluating the trained model.
-
+The deployment data is filtered to retain records where data_known = "yes".
 ![Model Testing](Workflow%20Screenshots/7-Selecting%20Node.png)
 
 ---
 
-### 09 — Churn
-The predicted results are filtered to identify customers meeting the specified churn prediction criteria.
+### 09 — Apply Trained Model
+The trained CHAID model is applied to the deployment dataset to generate churn predictions.
 
 ![Model Testing](Workflow%20Screenshots/8-Churn%20Node.png)
 
 ---
 
-### 10 — WRITE
+### 10 — Churn Selection
 
-A separate deployment dataset is imported into the stream for applying and evaluating the trained model.
+The predicted results are filtered to identify customers meeting the specified churn prediction criteria.
 
 ![Model Testing](Workflow%20Screenshots/9-Churn.png)
 
@@ -185,17 +184,17 @@ A separate deployment dataset is imported into the stream for applying and evalu
 
 ---
 
-### 12 — FILTER NODE 
+### 12 — Field Filtering
 
-A separate deployment dataset is imported into the stream for applying and evaluating the trained model.
+Only the relevant fields required for the final analysis are retained.
 
 ![Model Testing](Workflow%20Screenshots/11-Filter%20Node.png)
 
 ---
 
-### 13 — EXPORTING
+### 13 — Result Export
 
-A separate deployment dataset is imported into the stream for applying and evaluating the trained model.
+The final results are exported to a flat file for external use and further analysis.
 
 ![Model Testing](Workflow%20Screenshots/12-Exporting%20Data%20(2).png)
 
