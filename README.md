@@ -133,23 +133,23 @@ A **CHAID model** is trained using the prepared dataset to identify patterns ass
 
 ---
 
-### 06 — Deployment Dataset
+### 06 — Testing Dataset
 
-A separate deployment dataset is imported into the stream for applying and evaluating the trained model.
+A separate deployment (testing) dataset is imported into the stream for applying and evaluating the trained model.
 
 ![Model Testing](Workflow%20Screenshots/6-Importing%20for%20Testing.png)
 
 ---
 
-### 07 — Deployment Record Selection
+### 07 — Model Testing data Selection
 
-The deployment data is filtered to retain records where data_known = "yes".
+The testing data is filtered to retain records where data_known = "yes".
 
 ![Model Testing](Workflow%20Screenshots/7-Selecting%20Node.png)
 
 ---
 
-### 08 — Apply Trained Model
+### 08 — Applying Trained Model
 
 The trained CHAID model is applied to the deployment dataset to generate churn predictions.
 
