@@ -130,7 +130,7 @@ A **CHAID model** is trained using the prepared dataset to identify patterns ass
 
 ---
 
-### 05 — Prediction / Deployment
+### 05 — CHAID Model Training
 
 A separate deployment dataset is imported into the stream for applying and evaluating the trained model.
 
@@ -138,38 +138,74 @@ A separate deployment dataset is imported into the stream for applying and evalu
 
 ---
 
-### 06 — Deployment Record Selection
+### 06 — Complete Model Training Stream
 
 The deployment data is filtered to retain records where data_known = "yes".
 
-![Output Export](screenshots/export_output.png)
+![Output Export](Workflow%20Screenshots/5-Complete%20Model%20Training%20Workflow.png)
 
 ---
-### 07 — Model Application
+
+### 07 — Importing Dataset for Model Testing
 
 A separate deployment dataset is imported into the stream for applying and evaluating the trained model.
 
-![Model Testing](screenshots/model_testing.png)
+![Model Testing](Workflow%20Screenshots/6-Importing%20for%20Testing.png)
 
 ---
-### 08 — Churn Selection
+
+### 08 — Selecting data with yes for testing
 
 A separate deployment dataset is imported into the stream for applying and evaluating the trained model.
 
-![Model Testing](screenshots/model_testing.png)
+![Model Testing](Workflow%20Screenshots/7-Selecting%20Node.png)
 
 ---
+
 ### 09 — Churn
 The predicted results are filtered to identify customers meeting the specified churn prediction criteria.
 
-![Model Testing](screenshots/model_testing.png)
+![Model Testing](Workflow%20Screenshots/8-Churn%20Node.png)
 
 ---
-### 10 — Prediction / Deployment
+
+### 10 — WRITE
 
 A separate deployment dataset is imported into the stream for applying and evaluating the trained model.
 
-![Model Testing](screenshots/model_testing.png)
+![Model Testing](Workflow%20Screenshots/9-Churn.png)
+
+---
+
+### 11 — WRITE
+
+A separate deployment dataset is imported into the stream for applying and evaluating the trained model.
+
+![Model Testing](Workflow%20Screenshots/10.png)
+
+---
+
+### 12 — FILTER NODE 
+
+A separate deployment dataset is imported into the stream for applying and evaluating the trained model.
+
+![Model Testing](Workflow%20Screenshots/11-Filter%20Node.png)
+
+---
+
+### 13 — EXPORTING
+
+A separate deployment dataset is imported into the stream for applying and evaluating the trained model.
+
+![Model Testing](Workflow%20Screenshots/12-Exporting%20Data%20(2).png)
+
+---
+
+### 14 — FULL Stream
+
+A separate deployment dataset is imported into the stream for applying and evaluating the trained model.
+
+![Model Testing](Workflow%20Screenshots/13-Full%20Stream.png)
 
 ---
 
