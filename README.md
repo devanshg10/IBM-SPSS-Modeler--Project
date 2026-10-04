@@ -1,7 +1,8 @@
 # 📊 Telco Customer Churn Analysis
 
+<h2 align="center">Predictive Analytics with IBM SPSS Modeler</h2>
+
 <p align="center">
-  <strong>Predictive Analytics with IBM SPSS Modeler</strong><br>
   Customer churn classification using the CHAID decision-tree technique
 </p>
 
