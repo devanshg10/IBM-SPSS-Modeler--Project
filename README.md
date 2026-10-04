@@ -1,3 +1,10 @@
+
+<!-- Banner Section -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/crimsonrewind/assets/main/assets/banner.png" alt="Telco Churn Prediction Banner" width="100%">
+</p>
+
+<h1 align="center"> Telco Customer Churn Prediction using IBM SPSS Modeler</h1>
 # Customer Churn Prediction Pipeline ft. IBM SPSS
 
 <h2 align="center">Predictive Analytics with IBM SPSS Modeler</h2>
@@ -13,7 +20,7 @@
 
 ---
 
-## 🔎 Project Snapshot
+## 🔎 Project Overview
 
 Customer churn is an important business problem for telecommunications companies.  
 This project uses **IBM SPSS Modeler** to prepare customer data, construct a predictive model, evaluate churn-related records, and generate an output dataset for further analysis.
