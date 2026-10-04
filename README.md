@@ -4,8 +4,7 @@
   <img src="https://raw.githubusercontent.com/crimsonrewind/assets/main/assets/banner.png" alt="Telco Churn Prediction Banner" width="100%">
 </p>
 
-<h1 align="center"> Telco Customer Churn Prediction using IBM SPSS Modeler</h1>
-# Customer Churn Prediction Pipeline ft. IBM SPSS
+<h1 align="center"> Customer Churn Prediction Pipeline ft. IBM SPSS</h1>
 
 <h2 align="center">Predictive Analytics with IBM SPSS Modeler</h2>
 <p align="center">
