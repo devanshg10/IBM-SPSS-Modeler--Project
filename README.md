@@ -126,19 +126,11 @@ The dataset fields are configured with their appropriate measurement levels and 
 ### 04 — CHAID Model Training
 
 A **CHAID model** is trained using the prepared dataset to identify patterns associated with customer churn.
+
 ![CHAID Model](Workflow%20Screenshots/4-Churn.png)
 
----
 
-### 05 — CHAID Model Training
-
-A separate deployment dataset is imported into the stream for applying and evaluating the trained model.
-
-![Model Testing](Workflow%20Screenshots/5-Complete%20Model%20Training%20Workflow.png)
-
----
-
-### 06 — Complete Model Training Stream
+### 05 — Complete Model Training Stream
 
 The deployment data is filtered to retain records where data_known = "yes".
 
@@ -146,7 +138,7 @@ The deployment data is filtered to retain records where data_known = "yes".
 
 ---
 
-### 07 — Deployment Dataset
+### 06 — Deployment Dataset
 
 A separate deployment dataset is imported into the stream for applying and evaluating the trained model.
 
@@ -154,21 +146,21 @@ A separate deployment dataset is imported into the stream for applying and evalu
 
 ---
 
-### 08 — Deployment Record Selection
+### 07 — Deployment Record Selection
 
 The deployment data is filtered to retain records where data_known = "yes".
 ![Model Testing](Workflow%20Screenshots/7-Selecting%20Node.png)
 
 ---
 
-### 09 — Apply Trained Model
+### 08 — Apply Trained Model
 The trained CHAID model is applied to the deployment dataset to generate churn predictions.
 
 ![Model Testing](Workflow%20Screenshots/8-Churn%20Node.png)
 
 ---
 
-### 10 — Churn Selection
+### 9 — Churn Selection
 
 The predicted results are filtered to identify customers meeting the specified churn prediction criteria.
 
@@ -176,7 +168,7 @@ The predicted results are filtered to identify customers meeting the specified c
 
 ---
 
-### 11 — WRITE
+### 10 — WRITE
 
 A separate deployment dataset is imported into the stream for applying and evaluating the trained model.
 
@@ -184,7 +176,7 @@ A separate deployment dataset is imported into the stream for applying and evalu
 
 ---
 
-### 12 — Field Filtering
+### 11 — Field Filtering
 
 Only the relevant fields required for the final analysis are retained.
 
@@ -192,7 +184,7 @@ Only the relevant fields required for the final analysis are retained.
 
 ---
 
-### 13 — Result Export
+### 12 — Result Export
 
 The final results are exported to a flat file for external use and further analysis.
 
@@ -200,7 +192,7 @@ The final results are exported to a flat file for external use and further analy
 
 ---
 
-### 14 — FULL Stream
+### 13 — FULL Stream
 
 A separate deployment dataset is imported into the stream for applying and evaluating the trained model.
 
