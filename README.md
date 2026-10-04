@@ -119,14 +119,14 @@ data_known = "yes"
 
 The dataset fields are configured with their appropriate measurement levels and roles, including the churn target and predictor variables.
 
-![Field Configuration](Workflow%Screenshots/3-Type%Node.png)
+![Field Configuration](Workflow%20Screenshots/3-Type%20Node.png)
 
 ---
 
 ### 04 — CHAID Model Training
 
 A **CHAID model** is trained using the prepared dataset to identify patterns associated with customer churn.
-![CHAID Model](Workflow%Screenshots/4-Churn.png)
+![CHAID Model](Workflow%20Screenshots/4-Churn.png)
 
 ---
 
@@ -134,7 +134,7 @@ A **CHAID model** is trained using the prepared dataset to identify patterns ass
 
 A separate deployment dataset is imported into the stream for applying and evaluating the trained model.
 
-![Model Testing](Workflow%Screenshots/5-Complete%Model%Training%Workflow.png)
+![Model Testing](Workflow%20Screenshots/5-Complete%20Model%20Training%20Workflow.png)
 
 ---
 
