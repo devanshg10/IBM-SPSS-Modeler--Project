@@ -163,6 +163,12 @@ The complete SPSS Modeler stream brings together the training, testing, predicti
 
 ---
 
+### 14 — The Ouput
+
+![Complete Stream](Workflow%20Screenshots/13-Output%20of%20Stream.png)
+
+---
+
 ## 📈 Analysis Highlights
 
 The resulting model can be used to examine customer characteristics associated with churn.
