@@ -214,12 +214,13 @@ Through this project, the following concepts were practiced:
 
 ## 👨‍💻 Project Information
 
-**Student:** Devansh Gupta  
-**Roll No:** 1240258159
-**Batch:** BCADS-33
-**University:** Babu Banarasi Das University  
-**Subject:** Predictive Analytics
-
+| **Field** | **Details** |
+|---|---|
+| **Student** | Devansh Gupta |
+| **Roll No** | 1240258159 |
+| **Batch** | BCADS-33 |
+| **University** | Babu Banarasi Das University |
+| **Subject** | Predictive Analytics |
 ---
 
 <p align="center">
