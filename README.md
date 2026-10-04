@@ -212,7 +212,7 @@ Through this project, the following concepts were practiced:
 
 ---
 
-## 👨‍💻 Project Information
+## 👨‍💻 Built By:  
 
 | **Field** | **Details** |
 |---|---|
