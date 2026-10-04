@@ -95,9 +95,9 @@ The workflow is implemented completely through **IBM SPSS Modeler nodes**, makin
 
 ## 🖥️ SPSS Modeler Implementation
 
-### 01 — Dataset Preparation
+### 01 — Dataset Import
 
-The source dataset is imported into the SPSS Modeler stream through the appropriate input node.
+The Telco customer churn dataset is imported into IBM SPSS Modeler through an Excel source node.
 
 ![Dataset Import](Workflow%20Screenshots/1-Importing.png)
 
@@ -105,44 +105,71 @@ The source dataset is imported into the SPSS Modeler stream through the appropri
 
 ### 02 — Record Selection
 
-A **Select node** is used to restrict the analysis to records satisfying:
+Records with **data_known = "yes"** are retained for further analysis.
 
 ```text
 data_known = "yes"
 ```
+
 ![Data Filtering](Workflow%20Screenshots/2-Selecting%20Node.png)
 
 ---
 
 ### 03 — Field Configuration
 
-The **Type node** is used to define the appropriate field roles, targets, predictors, and measurement levels before model building.
+The dataset fields are configured with their appropriate measurement levels and roles, including the churn target and predictor variables.
 
-![Field Configuration](screenshots/type_node.png)
+![Field Configuration](Workflow%Screenshots/3-Type%Node.png)
 
 ---
 
-### 04 — CHAID Model
+### 04 — CHAID Model Training
 
-The prepared dataset is passed into the **CHAID node** to construct the classification model.
-
-![CHAID Model](screenshots/model_training.png)
+A **CHAID model** is trained using the prepared dataset to identify patterns associated with customer churn.
+![CHAID Model](Workflow%Screenshots/4-Churn.png)
 
 ---
 
 ### 05 — Prediction / Deployment
 
-The trained model is applied to the deployment dataset to generate predicted customer outcomes.
+A separate deployment dataset is imported into the stream for applying and evaluating the trained model.
+
+![Model Testing](Workflow%Screenshots/5-Complete%Model%Training%Workflow.png)
+
+---
+
+### 06 — Deployment Record Selection
+
+The deployment data is filtered to retain records where data_known = "yes".
+
+![Output Export](screenshots/export_output.png)
+
+---
+### 07 — Model Application
+
+A separate deployment dataset is imported into the stream for applying and evaluating the trained model.
 
 ![Model Testing](screenshots/model_testing.png)
 
 ---
+### 08 — Churn Selection
 
-### 06 — Final Output
+A separate deployment dataset is imported into the stream for applying and evaluating the trained model.
 
-The required prediction fields are selected and exported using a **Flat File node**.
+![Model Testing](screenshots/model_testing.png)
 
-![Output Export](screenshots/export_output.png)
+---
+### 09 — Churn
+The predicted results are filtered to identify customers meeting the specified churn prediction criteria.
+
+![Model Testing](screenshots/model_testing.png)
+
+---
+### 10 — Prediction / Deployment
+
+A separate deployment dataset is imported into the stream for applying and evaluating the trained model.
+
+![Model Testing](screenshots/model_testing.png)
 
 ---
 
