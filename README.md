@@ -1,14 +1,13 @@
 
 <!-- Banner Section -->
 <p align="center">
-  <img src="assets/banner.png" alt="A Study of Churn Banner" width="100%">
+  <img src="assets/banner.png" alt="A Study of Churn" width="100%">
 </p>
 
-<h1 align="center"> Customer Churn Prediction Pipeline ft. IBM SPSS</h1>
+<h1 align="center">Customer Churn Prediction Pipeline</h1>
 
-<h2 align="center">Predictive Analytics with IBM SPSS Modeler</h2>
 <p align="center">
-  Customer churn classification using the CHAID decision-tree technique
+  A CHAID-based predictive analytics workflow built with IBM SPSS Modeler
 </p>
 
 <p align="center">
