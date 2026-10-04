@@ -1,28 +1,15 @@
 # 📊 Telco Customer Churn Analysis
 
 <p align="center">
-  <img src="https://img.shields.io/badge/IBM%20SPSS%20Modeler-0F62FE?style=for-the-badge&logo=ibm&logoColor=white">
-  <img src="https://img.shields.io/badge/CHAID-FF832B?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Predictive%20Analytics-198038?style=for-the-badge">
+  <strong>Predictive Analytics with IBM SPSS Modeler</strong><br>
+  Customer churn classification using the CHAID decision-tree technique
 </p>
 
 <p align="center">
-  <b>From customer data → CHAID model → churn prediction</b>
+  <img src="https://img.shields.io/badge/IBM-SPSS%20Modeler-0F62FE?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Model-CHAID-FF832B?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Project-Predictive%20Analytics-198038?style=for-the-badge">
 </p>
-
-<p align="center">
-  A practical predictive analytics workflow for identifying<br>
-  customer churn patterns using IBM SPSS Modeler.
-</p>
-
-<p align="center">
-  <a href="#-workflow">🔄 Workflow</a> •
-  <a href="#-stream-walkthrough">🧩 Stream</a> •
-  <a href="#-results">📈 Results</a> •
-  <a href="#-technology">🛠️ Technology</a>
-</p>
-
----
 
 ---
 
