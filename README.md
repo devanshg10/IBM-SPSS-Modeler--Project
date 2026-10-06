@@ -61,61 +61,92 @@ The workflow is implemented completely through **IBM SPSS Modeler nodes**, makin
 
 The complete workflow consists of data preparation, model training, testing, prediction, filtering, and output stages.
 
-### 01 — Dataset Preparation
+### 01 — Dataset Import
 
-The Telco customer churn dataset is imported into IBM SPSS Modeler through an Excel source node. Records are then filtered using `data_known = "yes"` and the required field roles and measurement levels are configured.
+The Telco customer churn dataset is imported into IBM SPSS Modeler through an Excel source node.
 
-![Dataset Preparation](Workflow%20Screenshots/1-Importing.png)
+![Dataset Import](Workflow%20Screenshots/1-Importing.png)
 
 ---
 
-### 02 — CHAID Model Development
+### 02 — Record Selection
 
-A **CHAID model** is trained using the prepared dataset to identify patterns associated with customer churn. The complete training stream brings together data preparation, field configuration, and CHAID model construction.
+Records with **data_known = "yes"** are retained for further analysis.
+
+![Data Filtering](Workflow%20Screenshots/2-Selecting%20Node.png)
+
+---
+
+### 03 — Field Configuration
+
+The dataset fields are configured with their appropriate measurement levels and roles, including the churn target and predictor variables.
+
+![Field Configuration](Workflow%20Screenshots/3-Type%20Node.png)
+
+---
+
+### 04 — CHAID Model Training
+
+A **CHAID model** is trained using the prepared dataset to identify patterns associated with customer churn.
 
 ![CHAID Model](Workflow%20Screenshots/4-Churn.png)
 
-![Complete Model Training Stream](Workflow%20Screenshots/5-Complete%20Model%20Training%20Workflow.png)
 
 ---
 
-### 03 — Model Testing
+### 08 — Applying Trained Model
 
-A separate deployment (testing) dataset is imported into the stream for applying and evaluating the trained model. The testing data is filtered to retain records where `data_known = "yes"`.
-
-![Testing Dataset](Workflow%20Screenshots/6-Importing%20for%20Testing.png)
-
----
-
-### 04 — Prediction & Churn Analysis
-
-The trained CHAID model is applied to the deployment dataset to generate churn predictions. The predicted results are then filtered to identify customers meeting the specified churn prediction criteria.
-
-Using the **Derive node**, the predicted churn score is converted into a percentage for evaluating the model’s prediction results.
+The trained CHAID model is applied to the deployment dataset to generate churn predictions.
 
 ![Applying Trained Model](Workflow%20Screenshots/8-Churn%20Node.png)
+
+---
+
+### 09 — Churn Selection
+
+The predicted results are filtered to identify customers meeting the specified churn prediction criteria.
 
 ![Churn Selection](Workflow%20Screenshots/9-Churn.png)
 
 ---
 
-### 05 — Result Processing
+### 10 — Churn Accuracy Calculation
 
-Only the relevant fields required for the final analysis are retained, and the final results are exported to a flat file for external use and further analysis.
+Using the **Derive node**, the predicted churn score is converted into a percentage for evaluating the model’s prediction results.
+
+![Churn Accuracy Calculation](Workflow%20Screenshots/10.png)
+
+---
+
+### 11 — Field Filtering
+
+Only the relevant fields required for the final analysis are retained.
 
 ![Field Filtering](Workflow%20Screenshots/11-Filter%20Node.png)
+
+---
+
+### 12 — Result Export
+
+The final results are exported to a flat file for external use and further analysis.
 
 ![Result Export](Workflow%20Screenshots/12-Exporting%20Data%20(2).png)
 
 ---
 
-### 06 — Complete Workflow & Output
+### 13 — Complete Stream
 
 The complete SPSS Modeler stream brings together the training, testing, prediction, filtering, and output stages into a unified workflow.
 
 ![Complete Stream](Workflow%20Screenshots/13-Full%20Stream.png)
 
-![Output](Workflow%20Screenshots/13-Output%20of%20Stream.png)
+---
+
+### 14 — The Ouput
+
+![Complete Stream](Workflow%20Screenshots/13-Output%20of%20Stream.png)
+
+---
 
 > **Detailed Documentation:**  
 > The complete 14-step SPSS Modeler workflow, including detailed explanations and screenshots for each stage, is documented in the **Project Report PDF**.
