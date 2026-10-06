@@ -71,7 +71,7 @@ The Telco customer churn dataset is imported into IBM SPSS Modeler through an Ex
 
 ### 02 — Record Selection
 
-Records with **data_known = "yes"** are retained for further analysis.
+Records with **`data_known = "yes"`** are retained for further analysis.
 
 ![Data Filtering](Workflow%20Screenshots/2-Selecting%20Node.png)
 
@@ -91,7 +91,6 @@ A **CHAID model** is trained using the prepared dataset to identify patterns ass
 
 ![CHAID Model](Workflow%20Screenshots/4-Churn.png)
 
-
 ---
 
 ### 05 — Applying Trained Model
@@ -99,7 +98,6 @@ A **CHAID model** is trained using the prepared dataset to identify patterns ass
 The trained CHAID model is applied to the deployment dataset to generate churn predictions.
 
 ![Applying Trained Model](Workflow%20Screenshots/8-Churn%20Node.png)
-
 
 ---
 
@@ -119,6 +117,7 @@ The complete SPSS Modeler stream brings together the training, testing, predicti
 
 > 📄 **Detailed Documentation**  
 > The complete 14-step IBM SPSS Modeler workflow, including detailed explanations and screenshots for each stage, is documented in the [**Project Report PDF**](Project%20Report.pdf).
+
 ---
 
 ## 📈 Analysis Highlights
@@ -269,6 +268,8 @@ The accompanying **Project Report PDF** provides the complete documentation of t
 - System architecture
 - Technologies used
 - Project observations and outcomes
+
+> 📘 **[View the Complete Project Report →](Project%20Report.pdf)**
 
 ---
 
