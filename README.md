@@ -100,29 +100,6 @@ The trained CHAID model is applied to the deployment dataset to generate churn p
 
 ![Applying Trained Model](Workflow%20Screenshots/8-Churn%20Node.png)
 
----
-
-### 09 — Churn Selection
-
-The predicted results are filtered to identify customers meeting the specified churn prediction criteria.
-
-![Churn Selection](Workflow%20Screenshots/9-Churn.png)
-
----
-
-### 10 — Churn Accuracy Calculation
-
-Using the **Derive node**, the predicted churn score is converted into a percentage for evaluating the model’s prediction results.
-
-![Churn Accuracy Calculation](Workflow%20Screenshots/10.png)
-
----
-
-### 11 — Field Filtering
-
-Only the relevant fields required for the final analysis are retained.
-
-![Field Filtering](Workflow%20Screenshots/11-Filter%20Node.png)
 
 ---
 
