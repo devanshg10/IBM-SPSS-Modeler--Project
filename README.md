@@ -1,4 +1,3 @@
-
 <!-- Banner Section -->
 <p align="center">
   <img src="assets/banner.png" alt="A Study of Churn" width="100%">
@@ -25,13 +24,13 @@ This project uses **IBM SPSS Modeler** to prepare customer data, construct a pre
 
 ### What this project covers
 
--  Importing customer data
--  Filtering relevant records
--  Defining field roles and measurement levels
--  Building a CHAID model
--  Applying the model to deployment data
--  Selecting relevant churn predictions
--  Exporting the final results
+- Importing customer data
+- Filtering relevant records
+- Defining field roles and measurement levels
+- Building a CHAID model
+- Applying the model to deployment data
+- Selecting relevant churn predictions
+- Exporting the final results
 
 ---
 
@@ -41,6 +40,7 @@ The primary aim is to develop a predictive workflow that can identify customers 
 
 The workflow is implemented completely through **IBM SPSS Modeler nodes**, making the project suitable for demonstrating a practical predictive-analytics pipeline.
 
+---
 
 ## ⚙️ Processing Workflow
 
@@ -59,113 +59,66 @@ The workflow is implemented completely through **IBM SPSS Modeler nodes**, makin
 
 ## 🖥️ Workflow Walkthrough
 
-### 01 — Dataset Import
+The complete workflow consists of data preparation, model training, testing, prediction, filtering, and output stages.
 
-The Telco customer churn dataset is imported into IBM SPSS Modeler through an Excel source node.
+### 01 — Dataset Preparation
 
-![Dataset Import](Workflow%20Screenshots/1-Importing.png)
+The Telco customer churn dataset is imported into IBM SPSS Modeler through an Excel source node. Records are then filtered using `data_known = "yes"` and the required field roles and measurement levels are configured.
 
----
-
-### 02 — Record Selection
-
-Records with **data_known = "yes"** are retained for further analysis.
-
-![Data Filtering](Workflow%20Screenshots/2-Selecting%20Node.png)
+![Dataset Preparation](Workflow%20Screenshots/1-Importing.png)
 
 ---
 
-### 03 — Field Configuration
+### 02 — CHAID Model Development
 
-The dataset fields are configured with their appropriate measurement levels and roles, including the churn target and predictor variables.
-
-![Field Configuration](Workflow%20Screenshots/3-Type%20Node.png)
-
----
-
-### 04 — CHAID Model Training
-
-A **CHAID model** is trained using the prepared dataset to identify patterns associated with customer churn.
+A **CHAID model** is trained using the prepared dataset to identify patterns associated with customer churn. The complete training stream brings together data preparation, field configuration, and CHAID model construction.
 
 ![CHAID Model](Workflow%20Screenshots/4-Churn.png)
-
----
-
-### 05 — Complete Model Training Stream
-
-The complete training stream brings together data preparation, field configuration, and CHAID model construction into a single workflow.
 
 ![Complete Model Training Stream](Workflow%20Screenshots/5-Complete%20Model%20Training%20Workflow.png)
 
 ---
 
-### 06 — Testing Dataset
+### 03 — Model Testing
 
-A separate deployment (testing) dataset is imported into the stream for applying and evaluating the trained model.
+A separate deployment (testing) dataset is imported into the stream for applying and evaluating the trained model. The testing data is filtered to retain records where `data_known = "yes"`.
 
 ![Testing Dataset](Workflow%20Screenshots/6-Importing%20for%20Testing.png)
 
 ---
 
-### 07 — Model Testing Data Selection
+### 04 — Prediction & Churn Analysis
 
-The testing data is filtered to retain records where `data_known = "yes"`.
+The trained CHAID model is applied to the deployment dataset to generate churn predictions. The predicted results are then filtered to identify customers meeting the specified churn prediction criteria.
 
-![Model Testing Data Selection](Workflow%20Screenshots/7-Selecting%20Node.png)
-
----
-
-### 08 — Applying Trained Model
-
-The trained CHAID model is applied to the deployment dataset to generate churn predictions.
+Using the **Derive node**, the predicted churn score is converted into a percentage for evaluating the model’s prediction results.
 
 ![Applying Trained Model](Workflow%20Screenshots/8-Churn%20Node.png)
-
----
-
-### 09 — Churn Selection
-
-The predicted results are filtered to identify customers meeting the specified churn prediction criteria.
 
 ![Churn Selection](Workflow%20Screenshots/9-Churn.png)
 
 ---
 
-### 10 — Churn Accuracy Calculation
+### 05 — Result Processing
 
-Using the **Derive node**, the predicted churn score is converted into a percentage for evaluating the model’s prediction results.
-
-![Churn Accuracy Calculation](Workflow%20Screenshots/10.png)
-
----
-
-### 11 — Field Filtering
-
-Only the relevant fields required for the final analysis are retained.
+Only the relevant fields required for the final analysis are retained, and the final results are exported to a flat file for external use and further analysis.
 
 ![Field Filtering](Workflow%20Screenshots/11-Filter%20Node.png)
-
----
-
-### 12 — Result Export
-
-The final results are exported to a flat file for external use and further analysis.
 
 ![Result Export](Workflow%20Screenshots/12-Exporting%20Data%20(2).png)
 
 ---
 
-### 13 — Complete Stream
+### 06 — Complete Workflow & Output
 
 The complete SPSS Modeler stream brings together the training, testing, prediction, filtering, and output stages into a unified workflow.
 
 ![Complete Stream](Workflow%20Screenshots/13-Full%20Stream.png)
 
----
+![Output](Workflow%20Screenshots/13-Output%20of%20Stream.png)
 
-### 14 — The Ouput
-
-![Complete Stream](Workflow%20Screenshots/13-Output%20of%20Stream.png)
+> **Detailed Documentation:**  
+> The complete 14-step SPSS Modeler workflow, including detailed explanations and screenshots for each stage, is documented in the **Project Report PDF**.
 
 ---
 
@@ -186,16 +139,100 @@ The final workflow produces a filtered set of prediction results that can be use
 
 ---
 
-## 🛠️ Technology Stack
+# 🚀 Project Extension — InsightAI
+
+After developing the predictive analytics workflow using **IBM SPSS Modeler**, the project was extended to explore how data analysis can be made more interactive through modern web technologies and AI.
+
+**InsightAI** is a web-based data analysis platform designed to allow users to upload datasets, explore their data, generate visual insights, and interact with the analysis through an LLM-powered interface.
+
+The extension builds upon the analytical concepts explored in the SPSS project while introducing a more interactive approach to dataset analysis.
+
+### What InsightAI covers
+
+- Dataset uploading and processing
+- Python-based data analysis using Pandas
+- Interactive data exploration
+- Data visualizations and statistical insights
+- Conversational interaction with datasets
+- LLM-powered analytical assistance
+- Web-based analytics interface
+
+---
+
+## 🧩 InsightAI Architecture
+
+```text
+Dataset
+   ↓
+Python + Pandas
+   ↓
+FastAPI Backend
+   ↓
+Data Analysis & Processing
+   ↓
+React Frontend
+   ↓
+Interactive Visualizations
+   ↓
+LLM-powered Analysis & Chat
+```
+
+The platform combines a **React frontend** with a **FastAPI backend** for data processing and analysis. Python and Pandas handle dataset operations, while an LLM API is used to provide conversational analytical assistance.
+
+---
+
+## 🛠️ InsightAI Technology Stack
 
 | Category | Technology |
 |---|---|
-| Analytics Platform | **IBM SPSS Modeler** |
-| Predictive Technique | **CHAID** |
-| Dataset | Telco Customer Data |
-| Data Input | Excel |
-| Data Output | Flat File |
-| Analysis Type | Classification / Predictive Analytics |
+| Frontend | **React** |
+| Backend | **FastAPI** |
+| Data Processing | **Python / Pandas** |
+| Visualization | **Recharts** |
+| AI / LLM | **OpenRouter API** |
+| Analysis Type | Interactive Data Analytics |
+
+---
+
+## 🖥️ InsightAI Preview
+
+### Interactive Data Analysis
+
+![InsightAI Dashboard](assets/insightai-dashboard.png)
+
+### Data Exploration & Visualizations
+
+![InsightAI Analysis](assets/insightai-analysis.png)
+
+### AI-Powered Data Interaction
+
+![InsightAI Chat](assets/insightai-chat.png)
+
+> Screenshots above represent the current development of the InsightAI extension.
+
+---
+
+## 🔗 From Predictive Analytics to AI-Powered Analytics
+
+The project demonstrates a progression from a structured predictive analytics workflow to an interactive AI-powered analytics platform.
+
+```text
+IBM SPSS Modeler
+       ↓
+Data Preparation
+       ↓
+Predictive Modelling
+       ↓
+Customer Churn Analysis
+       ↓
+Project Extension
+       ↓
+InsightAI
+       ↓
+Interactive AI-Powered Data Analysis
+```
+
+The SPSS workflow focuses on building and applying a predictive model, while InsightAI extends the analytical experience through a web-based interface combining data processing, visualization, and AI-powered interaction.
 
 ---
 
@@ -212,6 +249,27 @@ Through this project, the following concepts were practiced:
 - Filtering prediction results
 - Exporting analytical outputs
 - Interpreting customer churn patterns
+- Python-based data processing
+- Building a FastAPI backend
+- Developing an interactive React analytics interface
+- Integrating LLM-powered analytical assistance
+
+---
+
+## 📄 Detailed Project Report
+
+The accompanying **Project Report PDF** provides the complete documentation of the project, including:
+
+- Detailed 14-step IBM SPSS Modeler workflow
+- Complete workflow screenshots
+- Dataset and methodology
+- CHAID model development
+- Testing and prediction process
+- Output analysis
+- InsightAI project extension
+- System architecture
+- Technologies used
+- Project observations and outcomes
 
 ---
 
@@ -223,7 +281,7 @@ Through this project, the following concepts were practiced:
 
 ---
 
-## 👨‍💻 Built By:  
+## 👨‍💻 Built By:
 
 | **Field** | **Details** |
 |---|---|
@@ -232,8 +290,9 @@ Through this project, the following concepts were practiced:
 | **Batch** | BCADS-33 |
 | **University** | Babu Banarasi Das University |
 | **Subject** | Predictive Analytics |
+
 ---
 
 <p align="center">
-  <sub>Built as an academic predictive analytics project using IBM SPSS Modeler.</sub>
+  <sub>Built as an academic predictive analytics project using IBM SPSS Modeler and extended with an AI-powered data analytics platform.</sub>
 </p>
