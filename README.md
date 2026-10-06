@@ -94,7 +94,7 @@ A **CHAID model** is trained using the prepared dataset to identify patterns ass
 
 ---
 
-### 08 — Applying Trained Model
+### 05 — Applying Trained Model
 
 The trained CHAID model is applied to the deployment dataset to generate churn predictions.
 
@@ -103,7 +103,7 @@ The trained CHAID model is applied to the deployment dataset to generate churn p
 
 ---
 
-### 12 — Result Export
+### 06 — Result Export
 
 The final results are exported to a flat file for external use and further analysis.
 
@@ -111,13 +111,14 @@ The final results are exported to a flat file for external use and further analy
 
 ---
 
-### 13 — Complete Stream
+### 07 — Complete Stream
 
 The complete SPSS Modeler stream brings together the training, testing, prediction, filtering, and output stages into a unified workflow.
 
 ![Complete Stream](Workflow%20Screenshots/13-Full%20Stream.png)
 
-
+Detailed Documentation:
+The complete 14-step SPSS Modeler workflow, including detailed explanations and screenshots for each stage, is documented in the Project Report PDF.
 ---
 
 ## 📈 Analysis Highlights
