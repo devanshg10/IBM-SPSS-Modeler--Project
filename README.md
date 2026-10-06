@@ -117,16 +117,6 @@ The complete SPSS Modeler stream brings together the training, testing, predicti
 
 ![Complete Stream](Workflow%20Screenshots/13-Full%20Stream.png)
 
----
-
-### 14 — The Ouput
-
-![Complete Stream](Workflow%20Screenshots/13-Output%20of%20Stream.png)
-
----
-
-> **Detailed Documentation:**  
-> The complete 14-step SPSS Modeler workflow, including detailed explanations and screenshots for each stage, is documented in the **Project Report PDF**.
 
 ---
 
